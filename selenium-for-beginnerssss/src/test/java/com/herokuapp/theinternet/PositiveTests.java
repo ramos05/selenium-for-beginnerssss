@@ -28,10 +28,9 @@ public class PositiveTests {
 		String url = "http://the-internet.herokuapp.com/login";
 		driver.get(url);
 		System.out.println("Page is opened");
-		
 
 //////	sleep for 3 seconds
-        sleep(2000);
+		sleep(2000);
 ////
 //////		enter username
 		WebElement username = driver.findElement(By.id("username"));
@@ -49,7 +48,7 @@ public class PositiveTests {
 		sleep(2000);
 ////
 //////		verifications;
-//////		new url
+
 		String expectedUrl = "http://the-internet.herokuapp.com/secure";
 		String actualdUrl = driver.getCurrentUrl();
 		Assert.assertEquals(actualdUrl, expectedUrl, "Actual page URL is not the same as expected");
@@ -71,6 +70,7 @@ public class PositiveTests {
 		driver.quit();
 ////
 	}
+
 ////
 	private void sleep(long m) {
 		try {
@@ -80,6 +80,5 @@ public class PositiveTests {
 			e.printStackTrace();
 		}
 	}
-
 
 }
